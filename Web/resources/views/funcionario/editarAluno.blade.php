@@ -11,14 +11,14 @@
     <h4 class="mb-3">Dados do Aluno</h4>
     <ul class="list-group mb-8">
         <li class="list-group-item  lh-condensed">
-            <form method="POST" action="/home/criar-aluno" enctype="multipart/form-data">
-            @csrf
+            <form method="POST" action="/home/aluno/atualizar?a={{$aluno->id}}" enctype="multipart/form-data">
+                @csrf
                 <div class="mb-3">
                     <label for="nome">Nome</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" id="name" placeholder="Digite o nome do aluno" name="name" required>
+                        <input type="text" class="form-control" id="name" placeholder="Digite o nome do aluno" name="name" value="{{$aluno->name}}" required>
 
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                         <div class="form-group label-floating">
                             <label class="control-label">Contato</label>
                             <div class="input-group">
-                                <input type="tel" class="form-control" id="contato" placeholder="Digite o contato do aluno" name="contato" required>
+                                <input type="tel" class="form-control" id="contato" placeholder="Digite o contato do aluno" name="contato" value="{{$aluno->contato}}" required>
                             </div>
                         </div>
                     </div>
@@ -35,55 +35,8 @@
                         <div class="form-group label-floating">
                             <label class="control-label">Email</label>
                             <div class="input-group">
-                                <input type="email" class="form-control" id="email" placeholder="Digite o email do aluno" name="email" required>
+                                <input type="email" class="form-control" id="email" placeholder="Digite o email do aluno" name="email" value="{{$aluno->email}}" required>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group label-floating">
-                            <label class="control-label">Senha</label>
-                            <div class="input-group">
-                                <input type="password" class="form-control" id="password" placeholder="Digite a senha do aluno" name="password" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group label-floating">
-                            <label class="control-label">Confirmação Senha</label>
-                            <div class="input-group">
-                                <input type="password" class="form-control" id="password_confirmation" placeholder="Confirme a senha do aluno" name="password_confirmation" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group label-floating">
-                            <label class="control-label">Foto</label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="foto" name="foto">
-                                <label class="custom-file-label" for="customFile">Escolher</label>
-                            </div>
-                            <small class="form-text text-muted">
-                                Resolucao mínima recomendada (180 x 180 px).<br />
-                                Formato recomendado: JPG ou PNG.
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group label-floating">
-                            <label class="control-label">Impressão Digital</label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="digital" name="digital">
-                                <label class="custom-file-label" for="customFile">Escolher</label>
-                            </div>
-                            <small class="form-text text-muted">
-                                Ponha o dedo no sensor<br />
-                                Verifique, se o mesmo esta limpo.
-                            </small>
                         </div>
                     </div>
                 </div>
@@ -92,7 +45,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço do aluno" name="endereco" required>
+                        <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço do aluno" name="endereco" value="{{$aluno->endereco}}" required>
                     </div>
                 </div>
                 <div class="row">
@@ -101,6 +54,7 @@
                             <label class="control-label">Estado</label>
                             <div class="form-group">
                                 <select class="form-control" name="estado" id="estado">
+                                    <option>{{$aluno->estado}}</option>
                                     <option>Paraná</option>
                                     <option>Estrangeiro</option>
                                 </select>
@@ -111,7 +65,7 @@
                         <div class="form-group label-floating">
                             <label class="control-label">Cidade</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade do aluno" name="cidade" required>
+                                <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade do aluno" name="cidade" value="{{$aluno->cidade}}" required>
                             </div>
                         </div>
                     </div>
@@ -122,6 +76,7 @@
                             <label class="control-label">Curso</label>
                             <div class="form-group">
                                 <select class="form-control" name="curso" id="curso">
+                                    <option>{{$aluno->curso}}</option>
                                     <option>Administração</option>
                                     <option>Agronomia</option>
                                     <option>Analise e Desenvolvimento de Sistemas</option>
@@ -155,7 +110,7 @@
                     </div>
                 </div>
                 <hr class="mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Editar</button>
             </form>
         </li>
     </ul>

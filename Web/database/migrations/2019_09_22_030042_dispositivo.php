@@ -14,7 +14,7 @@ class Dispositivo extends Migration
     public function up()
     {
         Schema::create('dispositivo', function (Blueprint $table) {
-           
+
             $table->bigIncrements('id');
             $table->string('tipo');
             $table->string('curso');

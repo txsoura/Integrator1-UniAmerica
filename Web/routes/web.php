@@ -23,11 +23,11 @@ Route::get('/home', function () {
 
 Auth::routes();
 
-Route::get('/home/aluno/cadastrar', function(){
+Route::get('/home/aluno/cadastrar', function () {
     return view('funcionario.cadastroAluno');
 });
 
-Route::get('/home/dispositivo/cadastrar', function(){
+Route::get('/home/dispositivo/cadastrar', function () {
     return view('funcionario.cadastroDispositivo');
 });
 
@@ -42,12 +42,12 @@ Route::get('/home/dispositivo/apagar', 'DispositivoController@apagar');
 Route::post('/home/dispositivo/atualizar', 'DispositivoController@atualizar');
 Route::get('/home/dispositivo/editar', 'DispositivoController@editar');
 
-Route::post('/home/aluno/editar', 'AlunoController@editar');
-Route::post('/home/aluno/apagar', 'AlunoController@apagar');
+Route::get('/home/aluno/editar', 'AlunoController@editar');
+Route::post('/home/aluno/atualizar', 'AlunoController@atualizar');
+Route::get('/home/aluno/apagar', 'AlunoController@apagar');
 
 Route::get('/home/requisicao', 'RequisicaoController@aluno');
 Route::get('/home/dispositivo', 'RequisicaoController@verificar');
 
 Route::get('/home/dispositivo/requisitar', 'DispositivoController@requisitar');
 Route::get('/home/dispositivo/devolver', 'DispositivoController@devolver');
-

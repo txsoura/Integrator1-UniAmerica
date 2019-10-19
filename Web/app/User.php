@@ -29,5 +29,5 @@ class User extends Authenticatable
     ];
 
     //timestamps
-    public $timestamps=false;
+    public $timestamps = false;
 }

@@ -14,7 +14,7 @@ class Requisicao extends Migration
      */
     public function up()
     {
-        Schema::create('requisicao',function (Blueprint $table){
+        Schema::create('requisicao', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('aluno_id')->unsigned();
             $table->foreign('aluno_id')->references('id')->on('users');

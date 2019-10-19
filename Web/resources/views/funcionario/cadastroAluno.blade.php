@@ -12,7 +12,7 @@
     <ul class="list-group mb-8">
         <li class="list-group-item  lh-condensed">
             <form method="POST" action="/home/aluno/criar" enctype="multipart/form-data">
-            @csrf
+                @csrf
                 <div class="mb-3">
                     <label for="nome">Nome</label>
                     <div class="input-group">

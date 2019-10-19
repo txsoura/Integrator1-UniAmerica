@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Dispositivo;
-use App\Requisicao;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\RequisicaoController;
 use Illuminate\Support\Facades\Auth;
@@ -11,11 +10,12 @@ use Illuminate\Http\Request;
 
 class DispositivoController extends Controller
 {
-    public function editar(Request $request){
-        $d=$request->input('d');
-        $dispositivo=Dispositivo::find($d);
+    public function editar(Request $request)
+    {
+        $d = $request->input('d');
+        $dispositivo = Dispositivo::find($d);
 
-        return view('funcionario.editarDispositivo')->with('dispositivo',$dispositivo);
+        return view('funcionario.editarDispositivo')->with('dispositivo', $dispositivo);
     }
 
     public function atualizar(Request $request)
@@ -28,14 +28,15 @@ class DispositivoController extends Controller
 
         $dispositivo->save();
 
-        return redirect('/home')->with('Parabéns', 'Dispositivo atualizado.');
+        return redirect('/home/dispositivo/visualizar')->with('Parabéns', 'Dispositivo atualizado.');
     }
 
     public function apagar(Request $request)
     {
-        $instituicoes=Instituicao::find($id);
-        $instituicoes->delete();
-        return redirect('/membro/instituicao')->with('Obrigado', 'Instituição apagada com sucesso.');
+        $d = $request->input('d');
+        $dispositivo = Dispositivo::find($d);
+        $dispositivo->delete();
+        return redirect('/home/dispositivo/visualizar')->with('Obrigado', 'Dispositivo apagado com sucesso.');
     }
 
     public function requisitar(Request $request)
@@ -65,7 +66,6 @@ class DispositivoController extends Controller
 
     public function cadastrar(Request $request)
     {
-        //criar dispositivo
         $dispositivo = new Dispositivo;
         $dispositivo->tipo = $request->input('tipo');
         $dispositivo->curso = $request->input('curso');
@@ -73,7 +73,7 @@ class DispositivoController extends Controller
 
         $dispositivo->save();
 
-        return redirect('/home')->with('Parabéns', 'Dispositivo cadastrado.');
+        return redirect('/home/dispositivo/visualizar')->with('Parabéns', 'Dispositivo cadastrado.');
     }
 
     public function funcionario()

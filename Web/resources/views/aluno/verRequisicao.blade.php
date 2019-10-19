@@ -24,10 +24,10 @@
         <td>{{$requisicao->id}}</td>
         <td>{{$requisicao->dispositivo_id}}</td>
         <td>@if($requisicao->estado=1)
-              Não devolvido
-            @else
-              Devolvido
-            @endif
+          Não devolvido
+          @else
+          Devolvido
+          @endif
         </td>
         <td>{{$requisicao->data}}</td>
       </tr>

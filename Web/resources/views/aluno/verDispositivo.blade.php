@@ -31,7 +31,7 @@
       @endforeach
       @else
       <tr>
-      <td>Só pode requisitar um equipamento por vez.</td>
+        <td>Só pode requisitar um equipamento por vez.</td>
       </tr>
       @endif
     </tbody>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Requisicao;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
 
 class RequisicaoController extends Controller
 {
@@ -15,7 +14,7 @@ class RequisicaoController extends Controller
 
         $requisicao->save();
 
-        return redirect('/home')->with('Parabéns', 'Dispositivo devolvido.');
+        return redirect('/home/requisicao/visualizar')->with('Parabéns', 'Dispositivo devolvido.');
     }
 
     public function requisitar($d)
@@ -26,7 +25,7 @@ class RequisicaoController extends Controller
 
         $requisicao->save();
 
-        return redirect('/home')->with('Parabéns', 'Requisição efetuada.');
+        return redirect('/home/requisicao')->with('Parabéns', 'Requisição efetuada.');
     }
 
     public function funcionario()
