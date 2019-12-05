@@ -49,5 +49,4 @@ Route::get('/home/aluno/apagar', 'AlunoController@apagar');
 Route::get('/home/requisicao', 'RequisicaoController@aluno');
 Route::get('/home/dispositivo', 'RequisicaoController@verificar');
 
-Route::get('/home/dispositivo/requisitar', 'DispositivoController@requisitar');
 Route::get('/home/dispositivo/devolver', 'DispositivoController@devolver');

@@ -39,24 +39,6 @@ class DispositivoController extends Controller
         return redirect('/home/dispositivo/visualizar')->with('Obrigado', 'Dispositivo apagado com sucesso.');
     }
 
-    public function requisitar(Request $request)
-    {
-        $k = $request->input('k');
-        if($k == "tPmAT5Ab3j7F9"){
-        $d = $request->input('d');
-        $a = $request->input('a');
-        $dispositivo = Dispositivo::find($d);
-        $dispositivo->disponivel = 2;
-
-        $dispositivo->save();
-
-        $requisicao = new RequisicaoController();
-        return $requisicao->requisitar($d,$a);
-        }else{
-            return 404;
-        }
-    }
-
     public function devolver(Request $request)
     {
         $d = $request->input('d');

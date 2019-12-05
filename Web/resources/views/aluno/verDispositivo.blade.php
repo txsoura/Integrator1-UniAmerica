@@ -22,7 +22,6 @@
         <td>{{$dispositivo->id}}</td>
         <td>{{$dispositivo->tipo}}</td>
         <td>{{$dispositivo->curso}}</td>
-          {{-- <a href="/home/dispositivo/requisitar?d={{$dispositivo->id}}" class="label bg-green">Escolher</a> --}}
       </tr>
       @endforeach
       @else
