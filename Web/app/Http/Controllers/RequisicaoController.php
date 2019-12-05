@@ -17,15 +17,15 @@ class RequisicaoController extends Controller
         return redirect('/home/requisicao/visualizar')->with('Parabéns', 'Dispositivo devolvido.');
     }
 
-    public function requisitar($d)
+    public function requisitar($d,$a)
     {
         $requisicao = new Requisicao;
-        $requisicao->aluno_id = Auth::user()->id;
+        $requisicao->aluno_id = $a;
         $requisicao->dispositivo_id = $d;
 
         $requisicao->save();
 
-        return redirect('/home/requisicao')->with('Parabéns', 'Requisição efetuada.');
+        return 200;
     }
 
     public function funcionario()

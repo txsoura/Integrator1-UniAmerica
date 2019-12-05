@@ -19,8 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->bigInteger('contato')->unique();
-            $table->string('foto')->unique()->nullable();
-            $table->string('digital')->unique()->nullable();
             $table->string('endereco');
             $table->string('estado');
             $table->string('cidade');

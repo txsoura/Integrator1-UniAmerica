@@ -58,35 +58,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group label-floating">
-                            <label class="control-label">Foto</label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="foto" name="foto">
-                                <label class="custom-file-label" for="customFile">Escolher</label>
-                            </div>
-                            <small class="form-text text-muted">
-                                Resolucao mínima recomendada (180 x 180 px).<br />
-                                Formato recomendado: JPG ou PNG.
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group label-floating">
-                            <label class="control-label">Impressão Digital</label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="digital" name="digital">
-                                <label class="custom-file-label" for="customFile">Escolher</label>
-                            </div>
-                            <small class="form-text text-muted">
-                                Ponha o dedo no sensor<br />
-                                Verifique, se o mesmo esta limpo.
-                            </small>
-                        </div>
-                    </div>
-                </div>
                 <div class="mb-3">
                     <label for="endereco">Endereço</label>
                     <div class="input-group">

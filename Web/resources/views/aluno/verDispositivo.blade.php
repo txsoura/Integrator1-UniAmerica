@@ -13,8 +13,6 @@
         </th>
         <th class="th-sm">Curso
         </th>
-        <th class="th-sm">Opções
-        </th>
       </tr>
     </thead>
     <tbody>
@@ -24,9 +22,7 @@
         <td>{{$dispositivo->id}}</td>
         <td>{{$dispositivo->tipo}}</td>
         <td>{{$dispositivo->curso}}</td>
-        <td>
-          <a href="/home/dispositivo/requisitar?d={{$dispositivo->id}}" class="label bg-green">Escolher</a>
-        </td>
+          {{-- <a href="/home/dispositivo/requisitar?d={{$dispositivo->id}}" class="label bg-green">Escolher</a> --}}
       </tr>
       @endforeach
       @else

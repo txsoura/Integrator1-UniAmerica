@@ -29,7 +29,13 @@
         <td>{{$requisicao->id}}</td>
         <td>{{$requisicao->aluno_id}}</td>
         <td>{{$requisicao->dispositivo_id}}</td>
-        <td>{{$requisicao->estado}}</td>
+        <td>
+          @if($requisicao->estado==1)
+          Emprestado
+          @else
+          Devolvido
+          @endif
+        </td>
         <td>{{$requisicao->data}}</td>
         <td>
           @if($requisicao->estado==1)

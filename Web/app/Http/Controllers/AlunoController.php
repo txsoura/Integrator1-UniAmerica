@@ -24,8 +24,6 @@ class AlunoController extends Controller
         $aluno->name = $request->input('name');
         $aluno->email = $request->input('email');
         $aluno->contato = $request->input('contato');
-        $aluno->foto = $request->input('foto');
-        $aluno->digital = $request->input('digital');
         $aluno->endereco = $request->input('endereco');
         $aluno->estado = $request->input('estado');
         $aluno->cidade = $request->input('cidade');
@@ -57,8 +55,6 @@ class AlunoController extends Controller
         $aluno->email = $request->input('email');
         $aluno->password = Hash::make($request->input('password'));
         $aluno->contato = $request->input('contato');
-        $aluno->foto = $request->input('foto');
-        $aluno->digital = $request->input('digital');
         $aluno->endereco = $request->input('endereco');
         $aluno->estado = $request->input('estado');
         $aluno->cidade = $request->input('cidade');

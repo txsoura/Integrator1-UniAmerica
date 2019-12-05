@@ -208,7 +208,7 @@
         </div>
 
         <div class="col-sm-4">
-            <a href="/home/dispositivo/visualizar"><img src="{{asset('img/R.png')}}" class="img-responsive " alt="Image"></a>
+            <a href="/home/dispositivo/visualizar"><img src="{{asset('img/R.PNG')}}" class="img-responsive " alt="Image"></a>
         </div>
         <div class="col-sm-4">
             <a href="/home/requisicao/visualizar"><img src="{{asset('img/L.png')}}" class="img-responsive " alt="Image"></a>
@@ -219,7 +219,7 @@
     @can('isUser')
     <div class="row">
         <div class="col-sm-4">
-            <a href="/home/dispositivo"><img src="{{asset('img/R.png')}}" class="img-responsive " alt="Image"></a>
+            <a href="/home/dispositivo"><img src="{{asset('img/R.PNG')}}" class="img-responsive " alt="Image"></a>
         </div>
 
         <div class="col-sm-4">
